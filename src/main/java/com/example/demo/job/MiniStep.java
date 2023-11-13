@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service("miniStep")
 public class MiniStep implements Tasklet  {
 
-    private static Logger LOG = LoggerFactory.getLogger(MiniStep.class);
+    private final static Logger LOG = LoggerFactory.getLogger(MiniStep.class);
 
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {

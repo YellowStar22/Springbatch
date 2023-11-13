@@ -7,13 +7,14 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNullApi;
 import org.springframework.stereotype.Component;
 
 @Component("miniTask")
 public class MiniTask implements Tasklet {
-    private static Logger LOG = LoggerFactory.getLogger(MiniTask.class);
+    private final static Logger LOG = LoggerFactory.getLogger(MiniTask.class);
 
-    private UnknowService unknowService;
+    private final UnknowService unknowService;
 
     public MiniTask(@Autowired UnknowService unknowService) {
         this.unknowService = unknowService;
