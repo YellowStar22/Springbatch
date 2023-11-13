@@ -10,10 +10,9 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Service;
 @StepScope
 @Service("miniStep")
-public class MiniStep implements Tasklet {
+public class MiniStep implements Tasklet  {
 
     private static Logger LOG = LoggerFactory.getLogger(MiniStep.class);
-
 
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {

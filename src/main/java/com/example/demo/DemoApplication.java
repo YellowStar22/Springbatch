@@ -13,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 @SpringBootApplication
 public class DemoApplication  {
-	public static void main(String[] args) throws Exception {
-		SpringApplication.exit(SpringApplication.run(JobConfiguration.class, args));
+	public static void main(String[] args){
+		SpringApplication.run(DemoApplication.class, args);
 	}
 }
